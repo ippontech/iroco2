@@ -7,13 +7,13 @@ assignees: ''
 
 ---
 
-## Objectif 🎯
-*L'objectif de l'item (reflète la valeur de l'item/feature à implémenter)*
+## Objective 🎯
+*The objective of the item (reflects the value of the item/feature to be implemented)*
 
 ## Description 📝
-*Description complète de l'item (tout les détails de pourquoi et comment on souhaite implémenter l'item)*
+*Complete description of the item (all details of why and how we want to implement the item)*
 
-## Critères d'acceptation ✅
+## Acceptance Criteria ✅
 
 ### Back-end 🖥️
 - [x] Checked
