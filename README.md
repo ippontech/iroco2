@@ -18,4 +18,4 @@ The project repositories are structured as follows:
 See [docs/](./docs) for architecture and technical decisions.
 
 ## 🤝 Contributing
-See [CONTRIBUTING.md](./CONTRIBUTING.md)
+See [CONTRIBUTING.md](./contribute/CONTRIBUTING.md)
