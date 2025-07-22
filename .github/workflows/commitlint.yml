@@ -2,9 +2,9 @@ name: Lint Commit Messages
 
 on:
   pull_request:
-    branches: ['**']  # Toutes les branches
+    branches: ['**']  # All branches
   push:
-    branches: ['**']  # Toutes les branches
+    branches: ['**']  # All branches
 jobs:
   commitlint:
     runs-on: ubuntu-latest
