@@ -2,7 +2,7 @@
 
 ## Context and Problem Statement
 
-* Actually we use _Clerk_ to authenticate in Iroco2
+* Currently we use _Clerk_ to authenticate in Iroco2
 * In development environment, developers do not necessary need _Clerk_
 * New developers do not have a _Clerk_ account
 
