@@ -1,3 +1,3 @@
 <!-- _navbar.md -->
 
-<a href="https://greensuite.ippon.fr">Retourner sur IroCO2</a>
+<a href="$URL_IROCO2">Retourner sur IroCO2</a>
