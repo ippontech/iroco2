@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IroCO2 Documentation</title>
+  <link rel="icon" type="image/x-icon" href="/docs/images/favicon.ico">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="IroCO2 Documentation">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    /* Custom CSS to add arrows or plus symbols before main sections */
+    .sidebar-nav > ul > li > a::before {
+      content: '➜'; /* Example arrow symbol */
+      display: inline-block;
+      margin-right: 5px;
+      transition: transform 0.3s ease;
+    }
+    .sidebar-nav > ul > li.active > a::before {
+      transform: rotate(90deg);
+    }
+    .sidebar-nav .app-sub-sidebar {
+      display: none;
+    }
+    .sidebar-nav > ul > li.active .app-sub-sidebar {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'IroCO2 🌱',
+      repo: '',
+      loadSidebar: true,
+      coverpage: true,
+      alias: { '/.*/_sidebar.md': '/_sidebar.md', '/.*/_navbar.md': '/_navbar.md', '/.*/_404.md': '/_404.md' },
+      homepage: 'docs/introduction.md',
+      notFoundPage: true,
+      subMaxLevel: 2,
+      nameLink: '/',
+      loadNavbar: true,
+      nativeEmoji: true,
+      search: 'auto',  // Enables the search plugin
+      plugins: [
+      function(hook, vm) {
+        hook.doneEach(function() {
+          var mainSections = document.querySelectorAll('.sidebar-nav > ul > li');
+          mainSections.forEach(function(item) {
+            var subMenu = item.querySelector('.app-sub-sidebar');
+            if (subMenu) {
+              var link = item.querySelector('a');
+              link.addEventListener('click', function(event) {
+                if (item.classList.contains('active')) {
+                  event.preventDefault();
+                  item.classList.remove('active');
+                  subMenu.classList.remove('open');
+                } else {
+                  event.preventDefault();
+                  item.classList.add('active');
+                  subMenu.classList.add('open');
+                }
+              });
+            }
+          });
+
+          // Handle sub-sections
+          var subSectionLinks = document.querySelectorAll('.app-sub-sidebar a');
+          subSectionLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+              mainSections.forEach(function(item) {
+                item.classList.remove('active');
+                var subMenu = item.querySelector('.app-sub-sidebar');
+                if (subMenu) {
+                  subMenu.classList.remove('open');
+                }
+              });
+            });
+          });
+        });
+      }
+    ],
+      enableSidebarCollapse: true
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- Docsify search plugin -->
+  <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+  <!-- Docsify collapse plugin -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+
+
+</body>
+</html>
