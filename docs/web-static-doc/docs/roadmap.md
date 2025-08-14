@@ -1,33 +1,35 @@
 # Roadmap
 
-Ceci est une liste d'améliorations que nous souhaitons apporter à IroCO2.
-Si vous souhaitez nous faire part de votre intérêt pour l'une d'entre elles ou pour en apporter une nouvelle,
-contactez-nous !
+> This page needs to be updated.
 
-## Méthodologie
+This is a list of improvements we would like to make to IroCO2.
+If you would like to express your interest in one of them or to suggest a new one,
+contact us!
 
-* Prise en compte du PUE des datacenters dans le calcul d’estimation de consommation électrique
-* Prise en compte du trafic réseaux dans le calcul d’estimation de consommation électrique
-* Versionning de la méthodologie d’estimation
-* Utilisation de coût carbone en direct
-* Prise en compte des émissions de carbone résultantes de la fabrication du matériel utilisé 
+## Methodology
 
-## Fonctionnalités 
+* Taking into account the PUE of datacenters in the electricity consumption estimation calculation
+* Taking into account network traffic in the electricity consumption estimation calculation
+* Versioning of the estimation methodology
+* Using real-time carbon cost
+* Taking into account the carbon emissions resulting from the production of the hardware used
 
-* Groupement d’infrastructures par tags
-* Versionning d’une infrastructure
-* Implémentation du scanner d’infrastructure et suivis réguliers de la tendance d’émission
-* Ajout de conseils dynamiques pour réduire l’empreinte carbone d’une infrastructure
-* Suivis d’objectifs de réduction d’impact
-* Génération de rapport d’émission d’une infrastructure
-* Comparaison du modèle _on premises_ au cloud public
-* Création et gestion d’organisation pour les utilisateurs
-* Corrélation de changements sur une infrastructure à une variation dans la tendance d’émission
+## Features
 
-## Compatibilité 
+* Grouping infrastructures by tags
+* Versioning of an infrastructure
+* Implementation of the infrastructure scanner and regular monitoring of the trend of carbon emissions
+* Adding dynamic advice to reduce the carbon footprint of an infrastructure
+* Monitoring of reduction targets
+* Generation of a report on the carbon emissions of an infrastructure
+* Comparison of the _on premises_ model to the public cloud
+* Creation and management of organizations for users
+* Correlation of changes on an infrastructure to a variation in the trend of carbon emissions
 
-* Ajout de services AWS compatibles avec IroCO2 (EKS, SageMaker, VPC, SQS, SNS, etc...)
-* Prise en charge du cloud provider Azure
-* Prise en charge du cloud provider GCP
-* Prise en charge du cloud provider OVH
-* Prise en charge du modèle _on premises_
+## Compatibility
+
+* Adding AWS services compatible with IroCO2 (EKS, SageMaker, VPC, SQS, SNS, etc...)
+* Support for the Azure cloud provider
+* Support for the GCP cloud provider
+* Support for the OVH cloud provider
+* Support for the _on premises_ model

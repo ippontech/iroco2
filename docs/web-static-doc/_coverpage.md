@@ -5,7 +5,7 @@
 
 <div style='color: white; font-family:inter'>
 <h1>IroCO<small>2</small></h1>
-Simplifiez l'estimation de votre empreinte carbone
+Simplify your carbon footprint estimation
 </div>
 
 

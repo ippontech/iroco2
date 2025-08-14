@@ -1,19 +1,15 @@
 # Introduction
 
-Avec IroCO2, simplifiez l'estimation de l'impact carbone de votre infrastructure et accélérez sa transformation pour un cloud plus vert. 🌱
+With IroCO2, simplify the estimation of your infrastructure's carbon footprint and accelerate its transformation towards a greener cloud. 🌱
 
 ## Vision
 
-Nous souhaitons fournir à travers IroCO2 une solution permettant de simplifier la mise en place d'une démarche GreenOps au sein de vos équipes. 
+Our goal with IroCO2 is to provide a solution that simplifies the implementation of a GreenOps approach within your teams. 
 
-La démarche peut se résumer à ces quelques mots : **Mesurer**, **Comprendre**, **Agir**.
-IroCO2 vise, à travers les différents outils proposés,
-à estimer ou mesurer l'impact carbone de vos solutions
-et de fournir des analyses et conseils quant à la réduction potentielle de vos impacts.
-Ces analyses vous permettront par la suite de définir une stratégie GreenOps,
-de l'implémenter au sein de vos équipes et de vos infrastructures,
-et enfin de suivre sa réalisation au quotidien sur IroCO2.
+The approach can be summarized in a few words: **Measure**, **Understand**, **Act**. 
+IroCO2 aims to estimate or measure the carbon footprint of your solutions
+and provide analysis and advice on potential reductions.
+These analyses will enable you to define a GreenOps strategy, implement it within your teams and infrastructure, and finally monitor its implementation on a daily basis on IroCO2.
 
-IroCO2 ne vise pas à fournir un outil de mesure du carbone au gramme près.
-La valeur de nos solutions se trouve dans la possibilité de comparer les estimations selon des changements de configuration techniques sur une infrastructure,
-et ce dans le but de rechercher une réduction de l'impact carbone.
+IroCO2 does not aim to provide a tool for measuring carbon emissions with precision. 
+The value of our solutions lies in the ability to compare estimates according to technical configuration changes on an infrastructure, and thus to seek a reduction in carbon footprint.

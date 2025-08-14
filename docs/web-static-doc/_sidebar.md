@@ -1,7 +1,7 @@
 <!-- docs/_sidebar.md -->
 
 * [Introduction](docs/introduction.md)
-* [Calculatrice carbone](docs/guide_calculatrice.md)
-* [Scanner carbone](docs/guide_scanner.md)
-* [Estimation carbone](docs/estimation_carbone.md)
+* [Carbon footprint Calculator/Designer](docs/guide_calculatrice.md)
+* [Carbon footprint Scanner](docs/guide_scanner.md)
+* [Carbon footprint methodology](docs/estimation_carbone.md)
 * [Roadmap](docs/roadmap.md)

@@ -1,41 +1,42 @@
-# Calculatrice carbone
+# Carbon Footprint Calculator
 
-## Créer une infrastructure
+> This section needs to be updated.
 
-Sur votre espace utilisateur,
-1. Rendez-vous sur *Mes infrastructures*
-2. Choissisez *Nouvelle Infrastructure*
-3. Configurez ensuite votre infrastructre en choisissant
-   * un nom
-   * un cloud provider parmi ceux compatibles avec IroCO2
-   * ainsi qu’une région par défaut sur laquelle vous souhaitez configurer vos composants.
+## Creating an infrastructure
+
+On your user space,
+1. Go to *My infrastructures*
+2. Choose *New Infrastructure*
+3. Configure your infrastructure by choosing
+   * a name
+   * a cloud provider compatible with IroCO2
+   * and a default region on which you want to configure your components.
 
 ![New infra page](./images/create_infrastructure.png)
 
-## Ajouter des composants 
+## Adding components
 
-Afin de représenter les ressources cloud qui sont ou seront présents sur votre infrastructure,
-il faut créer des composants qui reprennent les éléments de configuration d’une ressource (vCPUs, mémoire, stockage, etc...),
-ainsi que des éléments de configuration sur son usage (temps d’utilisation, réplication, etc...).
+In order to represent the cloud resources that are or will be present on your infrastructure,
+you need to create components that summarize the configuration elements of a resource (vCPUs, memory, storage, etc...),
+as well as usage configuration elements (usage time, replication, etc...).
 
-Vous pouvez, si vous le souhaitez, configurer un composant avec une région alternative à celle par défaut de votre infrastrucure.
+You can, if you want, configure a component with an alternative region to the default one of your infrastructure.
 
-Sur le *concepteur d'infrastructure*, sélectionner *Nouveau composant* et choisissez le service à configurer (par exemple : EC2, Lambda, etc...).
+On the *infrastructure designer*, select *New component* and choose the service to configure (for example: EC2, Lambda, etc...).
 
-## Estimer l'empreinte 
+## Estimating the carbon footprint
 
-L'estimation carbone d'une infrastructure va vous permettre d'avoir accès aux informations suivantes :
+The carbon footprint estimation of an infrastructure will give you access to the following information:
 
-- **Prévision d'empreinte carbone mensuelle** : Une masse CO2eq prévue sur une période de un mois
-- **Une aide à la comparaison** : Il sera plus facile de se rendre compte pour vos équipes de l'ampleur de l'impact
-   carbone des changements apportés à vos infrastructures avec des rapprochements à des actions du quotidien
-   (déplacements en voiture/avion, chauffage, etc...)
-- **Un classement des ressources les plus émétrices** : Pour mieux concentrer vos efforts d'amélioration
-- **Des propositions de régions alternatives** : Une comparaison des régions proches en fonction des différences financières 
-et environnementales pour vous aider dans les décisions de migration.
+- **Monthly carbon footprint forecast** : A CO2eq mass forecast over a period of one month
+- **A comparison aid** : It will be easier to understand the magnitude of the carbon footprint impact
+   of the changes made to your infrastructures with comparisons to everyday actions
+   (car/air travel, heating, etc...)
+- **A ranking of the most emitting resources** : To better focus your improvement efforts
+- **Alternative region proposals** : A comparison of nearby regions based on financial and environmental differences
+to help you make migration decisions.
 
-## Réduire son empreinte 
+## Reducing your carbon footprint
 
-Pour chacun des services cloud compatibles avec IroCO2, vous pouvez vous référer au *Catalogue de disponibilité* pour y
-trouver des leviers d’actions permettant de commencer à éco-concevoir votre infrastructure
-et réduire son empreinte carbone.
+For each of the cloud services compatible with IroCO2, you can refer to the *Availability catalog* to find levers of action
+to start eco-designing your infrastructure and reduce its carbon footprint.
