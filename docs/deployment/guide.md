@@ -62,7 +62,3 @@ You can deploy IroCO2 in any region supported by AWS. Exception: the client side
         1. You will get the latest version of the docker image of the backend API. You can find them on this page: https://hub.docker.com/r/ippontech/iroco2-backend
     4. Apply the terraform project with `terraform apply -var-file=../tfvars/<env>.tfvars`
 5. Clone the lambda repository [iroco2-lambda](https://github.com/ippontech/iroco2-lambdas)
-    
-    
-    
-    
