@@ -16,6 +16,14 @@ But today, we want to allow self-hosting of the solution. The Terraform and depl
 - Terraform
 - A domain name within Route53 (or a delegation to Route53)
 
+### Required skills (estimates)
+- AWS (console/CLI): intermediate
+- Terraform (init/plan/apply, backends, tfvars): intermediate
+- DNS/Certificates (Route53, ACM): basic–intermediate
+- IAM (roles/policies, least privilege): basic–intermediate
+- S3/CloudFront deployment basics: basic–intermediate
+- Containers/runtime (selecting image tags, health checks): basic
+
 ## Estimated deployment time
  
 Summary (elapsed):
