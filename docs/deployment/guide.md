@@ -49,7 +49,7 @@ You can deploy IroCO2 in any region supported by AWS. Exception: the client side
 1. Clone the [terraform repository](https://github.com/ippontech/iroco2-terraform-modules)
 2. Each directory in the `layers` folder is a terraform project. For each : 
     1. Add you backend configuration in the `backend-configs` directory as well as environment configuration in the `env-configs` directory
-    2. Init the terraform project with `terraform init -backend-config=../backend-configs/<backend>.tfvars -var-file=../env-configs/<env>.tfvars`
+    2. Initialize the terraform project with `terraform init -backend-config=../backend-configs/<backend>.tfvars -var-file=../env-configs/<env>.tfvars`
     3. Provide all the needed variables in a tfvars file in the `tfvars` directory
     4. Apply the terraform project with `terraform apply -var-file=../tfvars/<env>.tfvars`
 3. Clone the [frontend repository](https://github.com/ippontech/iroco2-frontend)
