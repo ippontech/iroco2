@@ -8,8 +8,6 @@ IroCO2 has been designed to be a SaaS at first and deployed in Ippon AWS account
 
 But today, we want to allow self-hosting of the solution. The Terraform and deployment approach currently present is not ideal for this purpose. But we plan to improve it in out next steps. If you want to self-host the solution, you can use the Terraform currently present in the repositories by reading this documentation.
 
-
-
 ## Prerequisites
 
 - An AWS account
