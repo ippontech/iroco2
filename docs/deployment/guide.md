@@ -32,6 +32,10 @@ Steps (human + AWS wait):
 
 Notes: Faster with org-ready IAM/Route53 and reusable `tfvars`. Slower with missing permissions, DNS delegation, CloudFront propagation.
 
+## Supported regions
+
+You can deploy IroCO2 in any region supported by AWS. Exception: the client side scanner lambda need to be deployed in `eu-west-3` and the CUR Data Export in `us-east-1`.
+
 ## Deployment
 
 1. Clone the [terraform repository](https://github.com/ippontech/iroco2-terraform-modules)
