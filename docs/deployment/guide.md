@@ -57,7 +57,7 @@ You can deploy IroCO2 in any region supported by AWS. Exception: the client side
     2. Follow the README of the frontend repository to deploy the frontend to your cloudfront distribution
 4. Clone the [backend repository](https://github.com/ippontech/iroco2-backend)
     1. Add your backend configuration in the `backend-configs` directory as well as environment configuration in the `tfvars` directory (you can choose the backend image version [here](https://github.com/orgs/ippontech/packages?repo_name=iroco2-backend))
-    2. Init the terraform project with `terraform init -backend-config=../backend-configs/<backend>.tfvars`
+    2. Initialize the terraform project with `terraform init -backend-config=../backend-configs/<backend>.tfvars`
     3. Provide all the needed variables in a tfvars file in the `tfvars` directory
         1. You will the get the latest version of the docker image of the backend API. You can find them on this page: https://hub.docker.com/r/ippontech/iroco2-backend
     4. Apply the terraform project with `terraform apply -var-file=../tfvars/<env>.tfvars`
