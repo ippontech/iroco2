@@ -10,10 +10,10 @@ This project is the main repository of the IroCO2 project. It contains general d
 
 The project repositories are structured as follows:
 
-- iroco2-frontend: The frontend repository.
-- iroco2-backend: The backend repository.
-- iroco2-lambdas: The lambda functions repository.
-- iroco2-terraform-modules: The terraform modules repository.
+- [iroco2-frontend](https://github.com/ippontech/iroco2-frontend): The frontend repository.
+- [iroco2-backend](https://github.com/ippontech/iroco2-backend): The backend repository.
+- [iroco2-lambdas](https://github.com/ippontech/iroco2-lambdas): The lambda functions repository.
+- [iroco2-terraform-modules](https://github.com/ippontech/iroco2-terraform-modules): The terraform modules repository.
 
 
 ## 📄 Documentation
