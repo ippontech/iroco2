@@ -30,5 +30,9 @@ See the general documentation website [here](https://ippontech.github.io/iroco2/
 
 See [docs/](./docs) for architecture and technical decisions.
 
+## Support
+
+If you have any questions or need support, please check if this problem has already been reported in the [issue tracker](https://github.com/ippontech/iroco2/issues). If not, please [create an issue](https://github.com/ippontech/iroco2/issues/new/choose).
+
 ## 🤝 Contributing
 See [CONTRIBUTING.md](./contribute/CONTRIBUTING.md)
