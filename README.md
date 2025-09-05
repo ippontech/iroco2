@@ -14,14 +14,24 @@ Today, we want to allow self-hosting of the solution. The Terraform currently pr
 
 This implies a lot of critical changes in the codebase and the architecture. If you want to self-host the solution, you can use the Terraform currently present in the repositories by reading this [documentation](./deployment/guide.md). Please, create any issue if you have problems regarding the self-hosting process, this will allow us to create a better documentation and improve the Terraform modules.
 
+## What IroCO2 propose ?
+
+IroCO2 propose a solution to measure and reduce the carbon footprint of your cloud infrastructures. It can be used to measure the carbon footprint of your AWS infrastructure and provide recommendations to reduce it.
+
+The solution is made up from 3 main tools:
+
+- **The Carbon footprint Calculator/Designer** : Inspired by the AWS Pricing Calculator, it allows you to estimate the carbon footprint of your cloud infrastructure before deploying it, allowing you to include sustainability by design.
+- **The CUR Analysis** : Import a CUR file to analyze the carbon footprint of your cloud infrastructure once.
+- **The Carbon footprint Scanner** : Scan your cloud infrastructure to analyze the carbon footprint of your cloud infrastructure in real-time.
+
 ## 📦 Project Structure
 
 The project repositories are structured as follows:
 
-- iroco2-frontend: The frontend repository.
-- iroco2-backend: The backend repository.
-- iroco2-lambdas: The lambda functions repository.
-- iroco2-terraform-modules: The terraform modules repository.
+- [iroco2-frontend](https://github.com/ippontech/iroco2-frontend): The frontend repository.
+- [iroco2-backend](https://github.com/ippontech/iroco2-backend): The backend repository.
+- [iroco2-lambdas](https://github.com/ippontech/iroco2-lambdas): The lambda functions repository.
+- [iroco2-terraform-modules](https://github.com/ippontech/iroco2-terraform-modules): The terraform modules repository.
 
 
 ## 📄 Documentation
