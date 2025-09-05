@@ -67,3 +67,13 @@ You can deploy IroCO2 in any region supported by AWS. Exception: the client side
 ## Backup & Restore
 
 The RDS databases that are created by the terraform modules are automatically backed up using AWS RDS snapshot. If needed you can follow this step by [step guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/restoring-rds.html) from AWS to restore it.
+
+## Costs
+
+> **Note:** The costs of running IroCO2 are not covered by Ippon Technologies. You will be responsible for the costs of running the solution.
+
+_We have designed the solution to work only during working hours._
+
+The estimated cost of running IroCO2 in AWS is around $100 per month. This is a rough estimate and can vary based on your specific use case.
+
+There is no licence cost, the software is free to use.
