@@ -16,7 +16,7 @@ This implies a lot of critical changes in the codebase and the architecture. If 
 
 ## What IroCO2 propose ?
 
-IroCO2 propose a solution to measure and reduce the carbon footprint of your cloud infrastructures. It can be used to measure the carbon footprint of your AWS infrastructure and provide recommendations to reduce it.
+IroCO2 proposes a solution to measure and reduce the carbon footprint of your cloud infrastructures. It can be used to measure the carbon footprint of your AWS infrastructure and provide recommendations to reduce it.
 
 The solution is made up from 3 main tools:
 
