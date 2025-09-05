@@ -68,6 +68,18 @@ You can deploy IroCO2 in any region supported by AWS. Exception: the client side
 
 The RDS databases that are created by the terraform modules are automatically backed up using AWS RDS snapshot. If needed you can follow this step by [step guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/restoring-rds.html) from AWS to restore it.
 
+## Secrets and data
+
+RDS database credentials are currently store within AWS Secrets Manager. Rotation is currently disabled.
+
+The secret variables in the backend are injected using Terraform in the ECS Fargate tasks see [backend.tf](https://github.com/ippontech/iroco2-backend/blob/main/tf/)
+
+### Where your data is stored
+
+Your data is stored in the RDS databases that are created by the Terraform modules. The data is stored in the AWS region you choose.
+
+If you use the CUR Analysis and the Scanner, the CUR report will be stored in the S3 bucket within your AWS account. If you choose to self-host IroCO2, no data is exported outside of your AWS account.
+
 ## Costs
 
 > **Note:** The costs of running IroCO2 are not covered by Ippon Technologies. You will be responsible for the costs of running the solution.
