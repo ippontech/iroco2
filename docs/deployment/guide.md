@@ -66,7 +66,7 @@ You can deploy IroCO2 in any region supported by AWS. Exception: the client side
 
 ## Backup & Restore
 
-The RDS databases that are created by the terraform modules are automatically backed up using AWS RDS snapshot. If needed you can follow this step by [step guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/restoring-rds.html) from AWS to restore it.
+The RDS databases which are created by the terraform modules are automatically backed up using AWS RDS snapshot. If needed you can follow this [step by step guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/restoring-rds.html) from AWS to restore it.
 
 ## Secrets and data
 
