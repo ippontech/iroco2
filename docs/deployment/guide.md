@@ -72,7 +72,7 @@ The RDS databases which are created by the terraform modules are automatically b
 
 RDS database credentials are currently store within AWS Secrets Manager. Rotation is currently disabled.
 
-The secret variables in the backend are injected using Terraform in the ECS Fargate tasks see [backend.tf](https://github.com/ippontech/iroco2-backend/blob/main/tf/)
+The secret variables in the backend are injected using Terraform in the ECS Fargate tasks. See [backend.tf](https://github.com/ippontech/iroco2-backend/blob/main/tf/).
 
 ### Where your data is stored
 
