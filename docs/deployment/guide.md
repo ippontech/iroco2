@@ -14,6 +14,8 @@ But today, we want to allow self-hosting of the solution. The Terraform and depl
 - Terraform
 - A domain name within Route53 (or a delegation to Route53)
 
+**_Note: root access to AWS account is not required_**
+
 ### Required skills (estimates)
 - AWS (console/CLI): intermediate
 - Terraform (init/plan/apply, backends, tfvars): intermediate
