@@ -3,11 +3,14 @@
 ## 1. Welcome!
 
 Thank you for considering contributing to this open source project! We welcome contributions of all kinds: code, documentation, ideas, and more.
-You can start with:
-- the [Code of conduct](../CODE_OF_CONDUCT.md)
+
+Here are the simple yet important guidelines for this project :
+- respect the [Code of conduct](../CODE_OF_CONDUCT.md)
 - use github tag to mention people and not their private names
 - do not mention secrets, passwords, private urls, sensitive tokens anywhere
 - use English as default language everywhere
+
+And that's pretty much it ! You are now ready to get started.
 
 ## 2. Getting Started
 
