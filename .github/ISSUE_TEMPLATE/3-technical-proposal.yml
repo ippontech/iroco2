@@ -1,0 +1,13 @@
+name: IroCO2 technical proposal template
+description: any idea of technical improvement
+type: Feature
+projects: "IroCO2 Kanban board"
+body:
+  - type: textarea
+    attributes:
+      label: Objective
+      description: The objective of the item (reflects the value of the item/feature to be implemented)
+  - type: textarea
+    attributes:
+      label: Description
+      description: Describe the improvement to be implemented
