@@ -1,5 +1,5 @@
 name: IroCO2 feature template
-about: Describe a new feature
+description: Describe a new feature
 type: Feature
 body:
   - type: textarea
