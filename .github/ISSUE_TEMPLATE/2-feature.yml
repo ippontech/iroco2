@@ -1,0 +1,12 @@
+name: IroCO2 feature template
+about: Describe a new feature
+type: Feature
+body:
+  - type: textarea
+    attributes:
+      label: Objective
+      description: The objective of the item (reflects the value of the item/feature to be implemented)
+  - type: textarea
+    attributes:
+      label: Description
+      description: Describe the new feature
