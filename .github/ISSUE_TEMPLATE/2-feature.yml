@@ -1,6 +1,7 @@
 name: IroCO2 feature template
 description: Describe a new feature
 type: Feature
+projects: "IroCO2 Kanban board"
 body:
   - type: textarea
     attributes:
