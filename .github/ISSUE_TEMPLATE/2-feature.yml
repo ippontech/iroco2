@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         ## Thank you for contributing to our project!
-        Thanks for taking the time to fill out this form.
+        You will find here what you need to fill out a feature request.
   - type: dropdown
     attributes:
       label: As
