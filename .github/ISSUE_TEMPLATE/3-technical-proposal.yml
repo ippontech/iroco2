@@ -20,3 +20,6 @@ body:
       description: Describe the improvement to be implemented
     validations:
       required: true
+  - type: textarea
+    attributes:
+      label: Additional information
