@@ -5,10 +5,9 @@ projects: "IroCO2 Kanban board"
 body:
   - type: markdown
     attributes:
-      value: "## Thank you for contributing to our project!"
-  - type: markdown
-    attributes:
-      value: Thanks for taking the time to fill out this bug report.
+      value: |
+        ## Thank you for contributing to our project!
+        Thanks for taking the time to fill out this bug report.
   - type: textarea
     attributes:
       label: Steps to reproduce
