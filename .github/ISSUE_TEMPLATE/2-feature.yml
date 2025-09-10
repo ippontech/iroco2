@@ -35,5 +35,4 @@ body:
       required: true
   - type: textarea
     attributes:
-      label: Description
-      description: Describe the new feature
+      label: Additional information
