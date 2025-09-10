@@ -1,6 +1,6 @@
 name: IroCO2 technical proposal template
 description: any idea of technical improvement
-type: Feature
+type: "Technical Proposal"
 projects: "IroCO2 Kanban board"
 body:
   - type: markdown
