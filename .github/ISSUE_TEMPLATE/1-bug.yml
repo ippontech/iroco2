@@ -12,10 +12,14 @@ body:
     attributes:
       label: Steps to reproduce
       description: How to reproduce this bug step by step
+    validations:
+      required: true
   - type: textarea
     attributes:
       label: Expected Behavior
       description: Describe what you expected
+    validations:
+      required: true
   - type: textarea
     attributes:
       label: Environment
@@ -23,3 +27,8 @@ body:
       value: |
         - OS: ...
         - Version: ...
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Additional information

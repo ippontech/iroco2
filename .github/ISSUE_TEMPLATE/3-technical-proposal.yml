@@ -12,7 +12,11 @@ body:
     attributes:
       label: Objective
       description: The objective of the item (reflects the value of the item/feature to be implemented)
+    validations:
+      required: true
   - type: textarea
     attributes:
       label: Description
       description: Describe the improvement to be implemented
+    validations:
+      required: true
