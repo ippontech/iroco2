@@ -8,16 +8,32 @@ body:
       value: |
         ## Thank you for contributing to our project!
         Thanks for taking the time to fill out this form.
-  - type: textarea
+  - type: dropdown
     attributes:
-      label: Objective
-      description: The objective of the item (reflects the value of the item/feature to be implemented)
+      label: As
+      description: Define the role
+      options:
+        - External contributor
+        - Ippon contributor
+        - Contributor
+        - Administrator
+        - User
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: I want to
+      description: Define the action
+      placeholder: do something
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: In order to
+      description: Describe the objective
     validations:
       required: true
   - type: textarea
     attributes:
       label: Description
       description: Describe the new feature
-    validations:
-      required: true
-
