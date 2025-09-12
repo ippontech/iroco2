@@ -1,7 +1,7 @@
 name: IroCO2 feature template
 description: Describe a new feature
 type: Feature
-projects: "IroCO2 Kanban board"
+projects: "ippontech/5"
 body:
   - type: markdown
     attributes:
