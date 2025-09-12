@@ -18,6 +18,7 @@ body:
         - Contributor
         - Administrator
         - User
+        - Other
     validations:
       required: true
   - type: input
