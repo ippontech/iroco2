@@ -1,0 +1,39 @@
+name: IroCO2 feature template
+description: Describe a new feature
+type: Feature
+projects: "IroCO2 Kanban board"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thank you for contributing to our project!
+        You will find here what you need to fill out a feature request.
+  - type: dropdown
+    attributes:
+      label: As
+      description: Define the role
+      options:
+        - External contributor
+        - Ippon contributor
+        - Contributor
+        - Administrator
+        - User
+        - Other
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: I want to
+      description: Define the action
+      placeholder: do something
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: In order to
+      description: Describe the objective
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Additional information

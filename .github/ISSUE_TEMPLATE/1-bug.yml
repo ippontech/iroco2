@@ -1,0 +1,34 @@
+name: IroCO2 bug report template
+description: Describe a bug
+type: Bug
+projects: "IroCO2 Kanban board"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thank you for contributing to our project!
+        You will find here what you need to fill out a bug report.
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: How to reproduce this bug step by step
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: Describe what you expected
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Environment
+      description: Details of environment (OS, Version, ...)
+      value: |
+        - OS: ...
+        - Version: ...
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Additional information
