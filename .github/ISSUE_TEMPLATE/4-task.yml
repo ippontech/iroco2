@@ -16,11 +16,4 @@ body:
       required: true
   - type: textarea
     attributes:
-      label: Acceptance Criteria
-      value: |
-        - [ ] 
-      validations:
-        required: true
-  - type: textarea
-    attributes:
       label: Additional information
