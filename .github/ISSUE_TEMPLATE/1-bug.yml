@@ -1,7 +1,7 @@
 name: IroCO2 bug report template
 description: Describe a bug
 type: Bug
-projects: "IroCO2 Kanban board"
+projects: "ippontech/5"
 body:
   - type: markdown
     attributes:
