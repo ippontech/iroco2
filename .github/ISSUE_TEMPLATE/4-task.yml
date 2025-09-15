@@ -1,0 +1,26 @@
+name: IroCO2 task template
+description: A specific task to do (usually part of a Feature)
+type: "Task"
+projects: "ippontech/5"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thank you for contributing to the project!
+        You will find here what you need to fill out your request.
+  - type: textarea
+    attributes:
+      label: Description
+      description: Describe what the task is about, and how to perform it.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Acceptance Criteria
+      value: |
+        - [ ] 
+      validations:
+        required: true
+  - type: textarea
+    attributes:
+      label: Additional information
