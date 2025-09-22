@@ -47,12 +47,14 @@ gitGraph
 
 ## 3. Commit Messages
 
-We use [Conventional Commits](https://www.conventionalcommits.org/) for commit messages, with the id of the corresponding ticket.
+We use [Conventional Commits](https://www.conventionalcommits.org/) for commit messages.
+
+We don't document the link of the associated ticket within the commit message but **in the github description** of the issue (section "Reference issues or tasks").
 
 **Example:**
 
 ```
-feat(auth): #789 implements login with email and password
+feat(auth): implements login with email and password
 ```
 
 It is checked in our Continous Integration.
