@@ -14,6 +14,16 @@ And that's pretty much it ! You are now ready to get started.
 
 ## 2. Getting Started
 
+### Prerequisite : Git LF/CRLF configuration
+
+By default, Git on Windows may convert line endings (LF → CRLF). Our Prettier config enforces LF. To avoid unwanted conversions, run one of the following:  
+  
+```bash  
+git config --system core.autocrlf false  # per-system
+git config --global core.autocrlf false  # per-user
+git config --local core.autocrlf false   # per-project
+```
+
 ### 2.1. For external contributors
 
 We use the [Forking Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow), used in
