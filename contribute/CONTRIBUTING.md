@@ -45,7 +45,12 @@ gitGraph
 	commit id: "C6"
 ```
 
-## 3. Commit Messages
+
+## 3. Testing standards
+
+A frame of standards have been designed and documented on [003_tests_standards.md](./contribute/adr/003_tests_standards.md).
+
+## 4. Commit Messages
 
 We use [Conventional Commits](https://www.conventionalcommits.org/) for commit messages, with the id of the corresponding ticket.
 
@@ -58,7 +63,7 @@ feat(auth): #789 implements login with email and password
 It is checked in our Continous Integration.
 To avoid surprised rejects, you can install [pre-commit](https://pre-commit.com) on your personal environment of development.
 
-## 4. Branch Naming Convention
+## 5. Branch Naming Convention
 
 We follow the [Conventional Branches](https://conventional-branch.github.io/) naming convention to ensure clarity, traceability, and automation.
 
@@ -90,13 +95,13 @@ docs/77-update-readme-instructions
 - `release`: For branches preparing a release (e.g., release/v1.2.0)
 - `chore`: Maintenance tasks
 
-### 4.1. Why This Convention Matters
+### 5.1. Why This Convention Matters
 
 - 🔍 **Clarity**: It’s easy to understand the purpose of a branch.
 - 🔗 **Traceability**: The issue number links code to its discussion and context.
 - ⚙️ **Automation**: Tools like `commit-check` and `commit-check-action` can verify branch names and enforce consistency.
 
-## 5. Merge convention
+## 6. Merge convention
 
 In the project, the pull request will be rebased and merge fast-forward.
 
@@ -133,7 +138,7 @@ gitGraph
 	commit id: "C3+C5"
 ```
 
-## 6. Tools & Checks
+## 7. Tools & Checks
 
 To help enforce the rules, we use:
 
@@ -144,6 +149,6 @@ To help enforce the rules, we use:
 
 These tools will validate branch names and commit messages during pull requests.
 
-## 7. Need Help?
+## 8. Need Help?
 
 If you have any questions or need assistance, feel free to open an issue or join the project discussion board. We’re happy to help!

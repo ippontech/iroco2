@@ -12,17 +12,17 @@ The frame we drew with standards to be respected is settled upon two lines of co
 
 The definition of standards around coverage was mainly based on experience and knowledge of the Ippon Technology team in place at the moment of said definition. Nevertheless, online resources can easily be found if you wish to deepen your comprehension of these rules definition (see for example the article ["What is code coverage"](https://www.atlassian.com/continuous-delivery/software-testing/code-coverage))
 
-### Objectives for code coverage by project
+### Objectives for code coverage by perimeter
 
 Since each side of IroCO2 application has its specificities, minimal coverage rate was established project by project. 
 
 Please keep in mind, in particular for Back-end and Front-end projects, that coverage philosophy of IroCO2 team go beyond quantity of tests, thinking also about quality and pertinence of each test.
 
-| Project perimeter | Source code opening | Long-term objective |
-| ----------------- | ------------------- | ------------------- |
-| Infrastructure    | 0%                  | 50%*                |
-| Back-end          | 80%                 | 90%                 |
-| Front-end         | 50%**               | 80%                 |
+| Perimeter      | Objective |
+| -------------- | --------- |
+| Infrastructure | 50%*      |
+| Back-end       | 90%       |
+| Front-end      | 80%**     |
 
 > \* : *indicative value which reflect the ambition to test main components with Terraform Test*
 > 

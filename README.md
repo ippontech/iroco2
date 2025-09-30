@@ -33,11 +33,6 @@ The project repositories are structured as follows:
 - [iroco2-lambdas](https://github.com/ippontech/iroco2-lambdas): The lambda functions repository.
 - [iroco2-terraform-modules](https://github.com/ippontech/iroco2-terraform-modules): The terraform modules repository.
 
-## ✅ Testing standards
-
-A frame of standards have been designed and documented on [003_tests_standards.md](./contribute/adr/003_tests_standards.md).
-
-
 ## 📄 Documentation
 
 See the general documentation website [here](https://ippontech.github.io/iroco2/#/).
