@@ -14,9 +14,9 @@ And that's pretty much it ! You are now ready to get started.
 
 ## 2. Getting Started
 
-### Prerequisite : Git LF/CRLF configuration
+### Prerequisite : Git LF/CRLF configuration (for Windows users)
 
-By default, Git on Windows may convert line endings (LF → CRLF). Our Prettier config enforces LF. To avoid unwanted conversions, run one of the following:  
+By default, Git on Windows may convert line endings (LF → CRLF). The whole IroCO2 project was configured to work with LF end-of-line. To avoid unwanted conversions, run one of the following:  
   
 ```bash  
 git config --system core.autocrlf false  # per-system
