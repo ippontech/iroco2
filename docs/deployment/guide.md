@@ -4,16 +4,19 @@ This is the primary, streamlined path to deploy the solution. It contains only w
 
 ## Context
 
-IroCO2 has been designed to be a SaaS at first and deployed in Ippon AWS account without possibility to self-host it. The Terraform currently present in the repositories is the one we used to maintain the SaaS deployment.
+IroCO2 is currently designed to be deployed on AWS with Terraform.
+The typical deployment is described in the following document.
 
-But today, we want to allow self-hosting of the solution. The Terraform and deployment approach currently present is not ideal for this purpose. But we plan to improve it in out next steps. If you want to self-host the solution, you can use the Terraform currently present in the repositories by reading this documentation.
+In the future, we want to allow additionnal platforms and self-hosting.
 
 ## Prerequisites
 
 - An AWS account with an S3 bucket available to store the terraform tfstate.
+- (optionnal) For *client-side-scanner* module, a symetrical KMS key, available within you AWS account
 - Terraform installed (either on a CI or locally)
 - A domain name within Route53 (or a delegation to Route53)
   - Records will need to be created, and certificates to be validated through DNS.
+- Go development tools on your local machine
 
 **_Note: root access to AWS account is not required_**
 
@@ -26,14 +29,16 @@ But today, we want to allow self-hosting of the solution. The Terraform and depl
 - Containers/runtime (selecting image tags, health checks): basic
 
 ## Estimated deployment time
- 
+
 Summary (elapsed):
-- Quick: 1.5–3h
-- Typical first-time: 4-6h
+- Configuration: 30m
+- Deployment infra: 1h
+- Deployment code: 1h
+- Validation tests: 30m
 
 Steps (human + AWS wait):
-1) AWS prereqs/account: 15–60m
-2) Terraform layers (3–5): 1.5–3h total
+1) AWS prereqs/account: 30m
+2) Terraform layers (3–5): 30m
 3) Backend (`iroco2-backend`): 30–60m
 4) Frontend (S3/CloudFront): 25–60m (incl. propagation)
 5) Lambdas: 25–45m
@@ -45,24 +50,102 @@ Notes: Faster with org-ready IAM/Route53 and reusable `tfvars`. Slower with miss
 
 You can deploy IroCO2 in any region supported by AWS. Exception: the client side scanner lambda need to be deployed in `eu-west-3` and the CUR Data Export in `us-east-1`.
 
+One of recommended region for deploying is `eu-west-3`. Here's [why](https://app.electricitymaps.com/zone/FR/live/fifteen_minutes/2025-10-14T13:00:00.000Z).
+
 ## Deployment
 
+### Pre-requisites
+1. Go language must me installed on your local machine.
+	&rarr; ie. `apt install golang`
+2. Create S3 bucket
+	- AWS CLI method
+`aws s3 mb s3://<your-bucket-name>`
+	- AWS GUI method
+	***{TODO}***
+
+3. Create a Route53 entry
+	Create a type A record (simple routing)
+4. (optionnal) Create KMS key for *client-side-scanner*
+	1. Create key 1
+	2. Create key step 2
+	3. Create key step 3
+	4. Add administrator for your key
+	5. Add user for your key
+	6. Modify key strategies :
+
+```
+{
+  "Id": "key-consolepolicy-3",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Enable IAM User Permissions",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::<account-id>:root"
+      },
+      "Action": "kms:*",
+      "Resource": "*"
+    },
+    {
+      "Sid": "Allow access for Key Administrators",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::<account-id>:role/aws-reserved/sso.amazonaws.com/<default-region>/<role>"
+      },
+      "Action": "kms:*",
+      "Resource": "*"
+    },
+    {
+      "Sid": "Authorization loggroup",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "logs.amazonaws.com"
+      },
+      "Action": [
+        "kms:Encrypt",
+        "kms:Decrypt",
+        "kms:ReEncrypt*",
+        "kms:GenerateDataKey*"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "ArnEquals": {
+          "kms:EncryptionContext:aws:logs:arn": "arn:aws:logs:<region>:<account-id>:log-group:<loggroup-id>"
+        }
+      }
+    }
+  ]
+}
+
+```
+
+
+### Deployment steps
+
 1. Clone the [terraform repository](https://github.com/ippontech/iroco2-terraform-modules)
-2. Each directory in the `layers` folder is a terraform project. For each : 
-    1. Add your backend configuration in the `backend-configs` directory as well as environment configuration in the `env-configs` directory
-    2. Initialize the terraform project with `terraform init -backend-config=../backend-configs/<backend>.tfvars -var-file=../env-configs/<env>.tfvars`
-    3. Provide all the needed variables in a tfvars file in the `tfvars` directory
-    4. Apply the terraform project with `terraform apply -var-file=../tfvars/<env>.tfvars`
-3. Clone the [frontend repository](https://github.com/ippontech/iroco2-frontend)
+2. Add your backend configuration in the `backend-configs` directory
+3. Add your environment variables in the `env-configs` directory
+4. Prepare authorizer lambda bootstrap:
+	1. Move to authorizer src directory
+	  `cd ./layers/iroco2-authorizer/src`
+	3. Execute build script
+	   `../scripts/build.sh`
+5. Each directory in the `layers` folder is a terraform project. For each one, in the following order **network**, **data**, **services**, **lambdas** (in no particular order), **api-gateway**:
+	1. Initialize the terraform project with your variables files:
+`	terraform init --backend-config=../../backend-configs/<yourfile>.tfvars --var-file=../../env-configs/<yourfile>.tfvars`
+    1. Provide all the needed variables in a tfvars file in the `tfvars` directory. You can copy the *tfvars.example* files.
+    2. Apply the terraform project with `terraform [plan,apply] -var-file=../../env-configs/<yourfile>.tfvars -var-file=./tfvars/<yourfile>.tfvars`
+6. Clone the [frontend repository](https://github.com/ippontech/iroco2-frontend)
     1. Retrieve the Cloudfront distribution ID and S3 bucket name from the terraform output of the previous repository (`layer/service`)
     2. Follow the README of the frontend repository to deploy the frontend to your cloudfront distribution
-4. Clone the [backend repository](https://github.com/ippontech/iroco2-backend)
+7. Clone the [backend repository](https://github.com/ippontech/iroco2-backend)
     1. Add your backend configuration in the `backend-configs` directory as well as environment configuration in the `tfvars` directory (you can choose the backend image version [here](https://github.com/orgs/ippontech/packages?repo_name=iroco2-backend))
     2. Initialize the terraform project with `terraform init -backend-config=../backend-configs/<backend>.tfvars`
     3. Provide all the needed variables in a tfvars file in the `tfvars` directory
         1. You will get the latest version of the docker image of the backend API. You can find them on this page: https://hub.docker.com/r/ippontech/iroco2-backend
     4. Apply the terraform project with `terraform apply -var-file=../tfvars/<env>.tfvars`
-5. Clone the lambda repository [iroco2-lambda](https://github.com/ippontech/iroco2-lambdas)
+8. Clone the lambda repository [iroco2-lambda](https://github.com/ippontech/iroco2-lambdas)
 
 
 ## Backup & Restore
@@ -119,3 +202,11 @@ Evidence Bookmark: Billable Services List
 - Link: docs/deployment/guide.md
 - Section: Costs > Billable AWS services (Mandatory vs Optional)
 - Paragraph: Table above
+
+
+## Deletion /!\ WIP
+
+1.Disable deletion protection on RDS DB
+2. In reverse order:
+	`terraform destroy -var-file=../../env-configs/<yourfile>.tfvars -var-file=./tfvars/<yourfile>.tfvars`
+3. Network has dependencies failures
