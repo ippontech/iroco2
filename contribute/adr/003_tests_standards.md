@@ -42,24 +42,25 @@ Still, the concrete strategy must match the reality of the project IroCO2, and m
 
 ### 2.a. Infrastructure
 
-For infrastructure perimeter, unit testing and integration testing appear to be difficult. Thus, infrastructure code will mostly be tested with End-to-end tests, focusing on the top of the test pyramid :
-
 #### UNIT testing
 
 - Definition
 > Testing infrastructure elements 
 - Strategy
-> Testing of main elements using for example Terraform Test
+> Testing of main elements using a combination of Terraform Test, variable validation, pre/post conditions as well as check blocks.
 
 #### INTEGRATION testing
 
-Not applicable
+- Definition
+> Testing infrastructure elements 
+- Strategy
+> Testing of main elements using a combination of Terraform Test, variable validation, pre/post conditions as well as check blocks.
 
 #### END-TO-END testing
 -  Definition
 > Testing the whole application.
 - Strategy
-> A few tests of use cases, to be executed manually at first, within an AWS sandbox running IroCO2 code. Automation shall be implemented in a second phase. 
+> A few tests of use cases, to be executed on an AWS sandbox account (e.g. Ippon's one) to run a `terraform apply` on the whole stack. Automation can be implemented for Continuous Delivery on non production environment, based on the fork of the github repo.
 
 ---
 
@@ -105,4 +106,4 @@ Not applicable
 -  Definition
 > Testing the whole application.
 - Strategy
-> A few tests of use cases, to be executed manually at first, within an AWS sandbox running IroCO2 code. Automation shall be implemented in a second phase. 
+> A few tests of use cases, to be executed on an AWS sandbox account (e.g. Ippon's one) to run a `terraform apply` on the whole stack. Automation can be implemented for Continuous Delivery on non production environment, based on the fork of the github repo.
