@@ -4,6 +4,8 @@ This is the primary, streamlined path to deploy the solution. It contains only w
 
 ## Context
 
+IroCO2 has been designed to be a SaaS at first and deployed in Ippon AWS account without possibility to self-host it. The Terraform currently present in the repositories is the one we used to maintain the SaaS deployment.
+
 IroCO2 is currently designed to be deployed on AWS with Terraform.
 The typical deployment is described in the following document.
 
@@ -32,7 +34,7 @@ In the future, we want to allow additionnal platforms and self-hosting.
 
 Summary (elapsed):
 - Configuration: 30m
-- Deployment infra: 1h
+- Deployment infra: 1h (DNS propagation/validation may take longer in some cases.)
 - Deployment code: 1h
 - Validation tests: 30m
 
@@ -64,61 +66,9 @@ One of recommended region for deploying is `eu-west-3`. Here's [why](https://app
 	***{TODO}***
 
 3. Create a Route53 entry
-	Create a type A record (simple routing)
-4. (optionnal) Create KMS key for *client-side-scanner*
-	1. Create key 1
-	2. Create key step 2
-	3. Create key step 3
-	4. Add administrator for your key
-	5. Add user for your key
-	6. Modify key strategies :
-
-```
-{
-  "Id": "key-consolepolicy-3",
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "Enable IAM User Permissions",
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "arn:aws:iam::<account-id>:root"
-      },
-      "Action": "kms:*",
-      "Resource": "*"
-    },
-    {
-      "Sid": "Allow access for Key Administrators",
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "arn:aws:iam::<account-id>:role/aws-reserved/sso.amazonaws.com/<default-region>/<role>"
-      },
-      "Action": "kms:*",
-      "Resource": "*"
-    },
-    {
-      "Sid": "Authorization loggroup",
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "logs.amazonaws.com"
-      },
-      "Action": [
-        "kms:Encrypt",
-        "kms:Decrypt",
-        "kms:ReEncrypt*",
-        "kms:GenerateDataKey*"
-      ],
-      "Resource": "*",
-      "Condition": {
-        "ArnEquals": {
-          "kms:EncryptionContext:aws:logs:arn": "arn:aws:logs:<region>:<account-id>:log-group:<loggroup-id>"
-        }
-      }
-    }
-  ]
-}
-
-```
+    - Create a type A record (simple routing)
+4. (optionnal) Create KMS key for *client-side-scanner*.
+    - See [documentation](https://ippontech.github.io/iroco2/#/docs/guide_scanner)
 
 
 ### Deployment steps
@@ -204,9 +154,13 @@ Evidence Bookmark: Billable Services List
 - Paragraph: Table above
 
 
-## Deletion /!\ WIP
+## Deletion
 
-1.Disable deletion protection on RDS DB
+
+/!\ WIP
+
+1. Disable deletion protection on RDS DB
 2. In reverse order:
-	`terraform destroy -var-file=../../env-configs/<yourfile>.tfvars -var-file=./tfvars/<yourfile>.tfvars`
+	  - `terraform destroy -var-file=../../env-configs/<yourfile>.tfvars -var-file=./tfvars/<yourfile>.tfvars`
 3. Network has dependencies failures
+4. Delete remaining resources, s3 buckets (alb logs, cloudfront sources, etc...)
