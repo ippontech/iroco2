@@ -118,3 +118,9 @@ Evidence Bookmark: Billable Services List
 - Link: docs/deployment/guide.md
 - Section: Costs > Billable AWS services (Mandatory vs Optional)
 - Paragraph: Table above
+
+## Architecture diagram
+
+Please find below the architecture diagram of the solution.
+
+![Architecture diagram](./DAT-Archi-Oct-2025.png)
