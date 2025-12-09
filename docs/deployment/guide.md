@@ -164,3 +164,14 @@ Evidence Bookmark: Billable Services List
 	  - `terraform destroy -var-file=../../env-configs/<yourfile>.tfvars -var-file=./tfvars/<yourfile>.tfvars`
 3. Network has dependencies failures
 4. Delete remaining resources, s3 buckets (alb logs, cloudfront sources, etc...)
+
+
+## Architecture diagram
+
+Please find below the architecture diagram of the solution.
+## Deletion
+
+
+/!\ WIP
+
+![Architecture diagram](./DAT-Archi-Oct-2025.png)
