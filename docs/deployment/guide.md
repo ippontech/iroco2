@@ -169,9 +169,5 @@ Evidence Bookmark: Billable Services List
 ## Architecture diagram
 
 Please find below the architecture diagram of the solution.
-## Deletion
-
-
-/!\ WIP
 
 ![Architecture diagram](./DAT-Archi-Oct-2025.png)
